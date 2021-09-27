@@ -50,5 +50,27 @@ namespace UserResgistrationException
             }
 
         }
+        ////Exception handling for Email
+        public void Email()
+        {
+            const string RegexEmail = @"^[A-Za-z0-9]+([\.+\-_][A-Za-z0-9]+)*@[a-zA-Z0-9]+\.?[A-Za-z]+\.?[A-Za-z]{2,}$";
+
+            Console.WriteLine("Enter Email");
+            string Email = Console.ReadLine();
+            try
+            {
+                bool validation3 = Regex.IsMatch(Email, RegexEmail);
+                if (validation3 == true)
+                    Console.WriteLine("Email is valid " + validation3);
+                else
+                {
+                    throw new ExceptionHandling(ExceptionHandling.CustomExceptionsType.INVALID_INPUT, "invalid Email");
+                }
+            }
+            catch (ExceptionHandling ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }

@@ -9,7 +9,8 @@ namespace UserResgistrationException
             Console.WriteLine("Welcome to userRegistration exception handling!");
             Validation validation = new Validation();
             //validation.FirstName();
-            validation.LastName();
+            //validation.LastName();
+            validation.Email();
         }
     }
 }
