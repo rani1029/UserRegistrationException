@@ -9,7 +9,7 @@ namespace UserResgistrationException
     {
 
         // enum for customdatatype
-        //custom Excetion type
+        //custom Exception type
         public enum CustomExceptionsType
         {
             INVALID_INPUT

@@ -6,9 +6,10 @@ namespace UserResgistrationException
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to userRegistration exception handling!");
             Validation validation = new Validation();
-            validation.FirstName();
+            //validation.FirstName();
+            validation.LastName();
         }
     }
 }
