@@ -95,11 +95,11 @@ namespace UserResgistrationException
                 Console.WriteLine(ex.Message);
             }
         }
-        //uc-4
-        //Exception handling for Minimum 8 charactor with Atleast one Uppercase
+        //uc-7
+        //Exception handling for Minimum 8 charactor with Atleast one Uppercase and one Numeric value
         public void PasswordAtleast1UpperCase()
         {
-            string RegexPassword = @"^[A-Z]+([0-9a-z@!#$%&*+?]*).{7,}$";
+            string RegexPassword = @"^([A-Z0-9]+)([a-z@!#$%&*+?]*).{7,25}$";
 
             Console.WriteLine("Enter Password");
             string Password = Console.ReadLine();
