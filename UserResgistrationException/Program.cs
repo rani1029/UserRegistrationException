@@ -11,7 +11,8 @@ namespace UserResgistrationException
             //validation.FirstName();
             //validation.LastName();
             //validation.Email();
-            validation.PhoneNumber();
+            //validation.PhoneNumber();
+            validation.PasswordMin8charactor();
         }
     }
 }

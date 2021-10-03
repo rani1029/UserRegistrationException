@@ -95,5 +95,28 @@ namespace UserResgistrationException
                 Console.WriteLine(ex.Message);
             }
         }
+        //uc-4
+        //Exception handling for PhoneNumber
+        public void PasswordMin8charactor()
+        {
+            string RegexPassword = "^[a-zA-Z0-9_!-+@#$]{8,}$";
+
+            Console.WriteLine("Enter Password");
+            string Password = Console.ReadLine();
+            try
+            {
+                bool validation3 = Regex.IsMatch(Password, RegexPassword);
+                if (validation3 == true)
+                    Console.WriteLine("Password is valid " + validation3);
+                else
+                {
+                    throw new ExceptionHandling(ExceptionHandling.CustomExceptionsType.INVALID_INPUT, "invalid Password");
+                }
+            }
+            catch (ExceptionHandling ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
