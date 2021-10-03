@@ -96,10 +96,10 @@ namespace UserResgistrationException
             }
         }
         //uc-4
-        //Exception handling for PhoneNumber
-        public void PasswordMin8charactor()
+        //Exception handling for Minimum 8 charactor with Atleast one Uppercase
+        public void PasswordAtleast1UpperCase()
         {
-            string RegexPassword = "^[a-zA-Z0-9_!-+@#$]{8,}$";
+            string RegexPassword = @"^[A-Z]+([0-9a-z@!#$%&*+?]*).{7,}$";
 
             Console.WriteLine("Enter Password");
             string Password = Console.ReadLine();

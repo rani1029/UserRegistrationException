@@ -12,7 +12,7 @@ namespace UserResgistrationException
             //validation.LastName();
             //validation.Email();
             //validation.PhoneNumber();
-            validation.PasswordMin8charactor();
+            validation.PasswordAtleast1UpperCase();
         }
     }
 }
