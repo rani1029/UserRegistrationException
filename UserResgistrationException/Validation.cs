@@ -50,7 +50,7 @@ namespace UserResgistrationException
             }
 
         }
-        ////Exception handling for Email
+        //Exception handling for Email
         public void Email()
         {
             const string RegexEmail = @"^[A-Za-z0-9]+([\.+\-_][A-Za-z0-9]+)*@[a-zA-Z0-9]+\.?[A-Za-z]+\.?[A-Za-z]{2,}$";
@@ -65,6 +65,29 @@ namespace UserResgistrationException
                 else
                 {
                     throw new ExceptionHandling(ExceptionHandling.CustomExceptionsType.INVALID_INPUT, "invalid Email");
+                }
+            }
+            catch (ExceptionHandling ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        //uc-4
+        //Exception handling for PhoneNumber
+        public void PhoneNumber()
+        {
+            string RegexPhoneNumber = "^[1-9]{1,2}[ ][1-9]{1}[0-9]{9}$";
+
+            Console.WriteLine("Enter PhoneNumber");
+            string PhoneNumber = Console.ReadLine();
+            try
+            {
+                bool validation3 = Regex.IsMatch(PhoneNumber, RegexPhoneNumber);
+                if (validation3 == true)
+                    Console.WriteLine("PhoneNumber is valid " + validation3);
+                else
+                {
+                    throw new ExceptionHandling(ExceptionHandling.CustomExceptionsType.INVALID_INPUT, "invalid PhoneNumber");
                 }
             }
             catch (ExceptionHandling ex)

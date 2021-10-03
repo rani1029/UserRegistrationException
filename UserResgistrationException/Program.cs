@@ -10,7 +10,8 @@ namespace UserResgistrationException
             Validation validation = new Validation();
             //validation.FirstName();
             //validation.LastName();
-            validation.Email();
+            //validation.Email();
+            validation.PhoneNumber();
         }
     }
 }
